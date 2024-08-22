@@ -8,14 +8,20 @@ package com.mycompany.configuracion;
  *
  * @author User
  */
-public class ConfiguracionHoraria implements RecursoCargable, Notificable {
-    @Override
+public class ConfiguracionSistema implements RecursoPersistente, Notificable {
+   
     public void load() {
-        System.out.println("Configuracion horaria cargada");
+        System.out.println("Configuracion sistema cargada");
+    }
+
+    @Override
+    public void save() {
+        System.out.println("Configuracion sistema almacenada");
     }
 
     @Override
     public void notifyUser() {
-        System.out.println("Notificando al usuario sobre la configuración horaria");
+        System.out.println("Notificando al usuario sobre la configuración del sistema");
     }
 }
+
